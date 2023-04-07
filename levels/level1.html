@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Heroic Features - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap icons-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="#!">Python</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Series</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">More</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-dark text-light rounded-3 text-center">
+                <div class="m-4 m-lg-5">
+                    <h1 class="display-5 fw-bold">CCP Competition</h1>
+                    <p class="fs-4">Competition CCP : Cup Of Coffee with Python <br>
+                    13/04/2023 at 10:00
+                    </p>
+                </div>
+            </div>
+        </div>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Exercice 1  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 1 :</p>
+                <p class="my-3">
+                    Écrire un programme qui calcule la somme de deux nombres donnés par l'utilisateur.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex1">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex1 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        a = float(input("Entrez le premier nombre: ")) <br>
+                                        b = float(input("Entrez le deuxième nombre: ")) <br>
+                                        somme = a + b <br>
+                                        print("La somme de", a, "et", b, "est égale à", somme)
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 2  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 2 :</p>
+                <p class="my-3">
+                    Écrire un programme qui calcule la moyenne de trois nombres donnés par l'utilisateur.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex2">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex2 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        a = float(input("Entrez le premier nombre: ")) <br>
+                                        b = float(input("Entrez le deuxième nombre: ")) <br>
+                                        c = float(input("Entrez le troisième nombre: ")) <br>
+                                        moyenne = (a + b + c) / 3 <br>
+                                        print("La moyenne de", a, ",", b, "et", c, "est égale à", moyenne)
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 3  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 3 :</p>
+                <p class="my-3">
+                    Écrire un programme qui convertit une température de Fahrenheit en Celsius.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex3">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex3 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        fahrenheit = float(input("Entrez la température en degrés Fahrenheit: ")) <br>
+                                        celsius = (fahrenheit - 32) * 5 / 9 <br>
+                                        print("La température en degrés Celsius est de", celsius) <br>
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 4  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 4 :</p>
+                <p class="my-3">
+                    Écrire un programme qui calcule la factorielle d'un nombre donné par l'utilisateur.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex4">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex4 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        n = int(input("Entrez un entier positif: ")) <br>
+                                        fact = 1 <br>
+                                        for i in range(1, n+1): <br>
+                                            fact *= i <br>
+                                        print("La factorielle de", n, "est", fact)
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 5  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 5 :</p>
+                <p class="my-3">
+                    Écrire un programme qui vérifie si un nombre est pair ou impair.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex5">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex5 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        n = int(input("Entrez un entier: ")) <br>
+                                        if n % 2 == 0: <br>
+                                            print(n, "est pair") <br>
+                                        else: <br>
+                                            print(n, "est impair")
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 6  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 6 :</p>
+                <p class="my-3">
+                    Écrire un programme qui trouve le plus grand nombre parmi trois nombres donnés par l'utilisateur.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex6">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex6 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        a = float(input("Entrez le premier nombre: ")) <br>
+                                        b = float(input("Entrez le deuxième nombre: ")) <br>
+                                        c = float(input("Entrez le troisième nombre: ")) <br>
+                                        if a > b and a > c: <br>
+                                            print(a, "est le plus grand nombre") <br>
+                                        elif b > a and b > c: <br>
+                                            print(b, "est le plus grand nombre") <br>
+                                        else: <br>
+                                            print(c, "est le plus grand nombre") <br>
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 7  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 7 :</p>
+                <p class="my-3">
+                    Écrire un programme qui calcule la somme des chiffres d'un nombre entier donné par l'utilisateur.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex7">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex7 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        n = int(input("Entrez un nombre entier: ")) <br>
+                                        somme = 0 <br>
+                                        while n != 0: <br>
+                                            somme += n % 10 <br>
+                                            n //= 10 <br>
+                                        print("La somme des chiffres du nombre est", somme)
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 8  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 8 :</p>
+                <p class="my-3">
+                    Écrire un programme qui affiche les nombres premiers entre 2 et un nombre donné par l'utilisateur.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex8">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex8 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        n = int(input("Entrez un nombre entier: ")) <br>
+                                        print("Les nombres premiers entre 2 et", n, "sont:") <br>
+                                        for i in range(2, n+1): <br>
+                                            for j in range(2, i): <br>
+                                                if i % j == 0: <br>
+                                                    break <br>
+                                            else: <br>
+                                                print(i) 
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 9  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 9 :</p>
+                <p class="my-3">
+                    Écrire un programme qui calcule la longueur de l'hypoténuse d'un triangle rectangle dont les deux autres côtés sont donnés par l'utilisateur.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex9">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex9 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        a = float(input("Entrez la longueur du premier côté: ")) <br>
+                                        b = float(input("Entrez la longueur du deuxième côté: ")) <br>
+                                        c = math.sqrt(a**2 + b**2) <br>
+                                        print("La longueur de l'hypoténuse est", c)
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 10  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 10 :</p>
+                <p class="my-3">
+                    Écrire un programme qui affiche les n premiers termes de la suite de Fibonacci, où n est donné par l'utilisateur.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex1O">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex 10 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        n = int(input("Entrez le nombre de termes à afficher: ")) <br>
+                                        a, b = 0, 1 <br>
+                                        print("Les", n, "premiers termes de la suite de Fibonacci sont:") <br>
+                                        for i in range(n): <br>
+                                            print(a) <br>
+                                            a, b = b, a+b
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
