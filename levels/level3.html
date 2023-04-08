@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Heroic Features - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap icons-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="../index.html">Python</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Series</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">More</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-dark text-light rounded-3 text-center">
+                <div class="m-4 m-lg-5">
+                    <h1 class="display-5 fw-bold">CCP Competition</h1>
+                    <p class="fs-4">Competition CCP : Cup Of Coffee with Python <br>
+                    13/04/2023 at 10:00
+                    </p>
+                </div>
+            </div>
+        </div>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Exercice 1  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 1 :</p>
+                <p class="my-3">
+                    Calculer la somme des chiffres d'un nombre entier
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex1">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex1 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def sum_digits(n): <br>
+                                            &nbsp;&nbsp;&nbsp;return sum(int(d) for d in str(n)) <br>
+                                        print(sum_digits(12345)) <br>
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 2  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 2 :</p>
+                <p class="my-3">
+                    Vérifier si un nombre est un carré parfait
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex2">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex2 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def is_perfect_square(n): <br>
+                                        &nbsp;&nbsp;&nbsp;return int(n**0.5)**2 == n <br>
+                                        print(is_perfect_square(16))
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 3  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 3 :</p>
+                <p class="my-3">
+                    Calculer la somme de tous les nombres premiers inférieurs à un nombre donné 
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex3">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex3 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def is_prime(n): <br>
+                                        &nbsp;&nbsp;&nbsp;if n < 2: <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return False <br>
+                                        &nbsp;&nbsp;&nbsp;for i in range(2, int(n**0.5)+1): <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if n % i == 0: <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return False <br>
+                                        &nbsp;&nbsp;&nbsp;return True <br>
+                                        def sum_primes(n): <br>
+                                        &nbsp;&nbsp;&nbsp;return sum(i for i in range(2, n+1) if is_prime(i) <br>
+                                        print(sum_primes(10))
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 4  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 4 :</p>
+                <p class="my-3">
+                    Trier une liste de chaînes de caractères par ordre alphabétique inversé 
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex4">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex4 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def sort_strings(l): <br>
+                                        &nbsp;&nbsp;&nbsp;return sorted(l, reverse=True) <br>
+                                        print(sort_strings(["banana", "apple", "cherry"]))
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 5  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 5 :</p>
+                <p class="my-3">
+                    Calculer la somme de tous les nombres pairs dans une liste 
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex5">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex5 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def sum_even_numbers(l): <br>
+                                        &nbsp;&nbsp;&nbsp;return sum(x for x in l if x % 2 == 0) <br>
+                                        print(sum_even_numbers([1, 2, 3, 4, 5, 6]))
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 6  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 6 :</p>
+                <p class="my-3">
+                    Trouver toutes les sous-chaînes d'une chaîne de caractères 
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex6">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex6 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def find_substrings(s): <br>
+                                        substrings = [] <br>
+                                        for i in range(len(s)): <br>
+                                        &nbsp;&nbsp;&nbsp;for j in range(i+1, len(s)+1): <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;substrings.append(s[i:j]) <br>
+                                        return substrings <br>
+
+                                        print(find_substrings("abc")) <br>
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 7  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 7 :</p>
+                <p class="my-3">
+                    Calculer le produit scalaire de deux vecteurs
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex7">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex7 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def dot_product(v1, v2): <br>
+                                        &nbsp;&nbsp;&nbsp;return sum(x*y for x,y in zip(v1, v2)) <br>
+
+                                        print(dot_product([1, 2, 3], [4, 5, 6]))
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 8  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 8 :</p>
+                <p class="my-3">
+                    Trouver toutes les combinaisons possibles de n éléments dans une liste 
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex8">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex8 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        import itertools <br> <br>
+
+                                        def combinations(l, n): <br>
+                                        &nbsp;&nbsp;&nbsp;return list(itertools.combinations(l, n)) <br>
+
+                                        print(combinations([1, 2, 3], 2)) 
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 9  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 9 :</p>
+                <p class="my-3">
+                    Trouver le plus grand sous-tableau contigu d'une liste 
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex9">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex9 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def max_subarray(l): <br>
+                                        &nbsp;&nbsp;&nbsp;max_sum = l[0] <br>
+                                        &nbsp;&nbsp;&nbsp;current_sum = l[0] <br>
+                                        &nbsp;&nbsp;&nbsp;for x in l[1:]: <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_sum = max(x, current_sum + x) <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_sum = max(max_sum, current_sum) <br>
+                                        &nbsp;&nbsp;&nbsp;return max_sum <br>
+                                        print(max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 10  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 10 :</p>
+                <p class="my-3">
+                    Déterminer si deux chaînes de caractères sont des rotations l'une de l'autre
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex1O">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex 10 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def is_rotation(s1, s2): <br> 
+                                        &nbsp;&nbsp;&nbsp;if len(s1) != len(s2): <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return False <br>
+                                        &nbsp;&nbsp;&nbsp;return s1 in s2 + s2 <br>
+
+                                        print(is_rotation("hello", "llohe"))
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
