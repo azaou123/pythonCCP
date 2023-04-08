@@ -1,0 +1,102 @@
+Bien sûr, voici les solutions pour les 10 exercices Python plus difficiles :
+
+Inverser une chaîne de caractères :
+python
+Copy code
+def reverse_string(s):
+    return s[::-1]
+
+print(reverse_string("Bonjour"))
+Trier une liste de nombres :
+python
+Copy code
+def sort_list(l):
+    return sorted(l)
+
+print(sort_list([4, 2, 1, 3]))
+Trouver tous les nombres premiers jusqu'à un nombre donné :
+python
+Copy code
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+def prime_numbers(n):
+    primes = []
+    for i in range(2, n+1):
+        if is_prime(i):
+            primes.append(i)
+    return primes
+
+print(prime_numbers(20))
+Trouver la médiane d'une liste de nombres :
+python
+Copy code
+def median(l):
+    n = len(l)
+    s = sorted(l)
+    if n % 2 == 0:
+        return (s[n//2-1] + s[n//2]) / 2
+    else:
+        return s[n//2]
+
+print(median([1, 2, 3, 4, 5]))
+Vérifier si une chaîne de caractères est un palindrome :
+python
+Copy code
+def is_palindrome(s):
+    return s == s[::-1]
+
+print(is_palindrome("radar"))
+Trouver le nombre de valeurs dans une liste qui sont plus grandes que la moyenne :
+python
+Copy code
+def count_above_mean(l):
+    mean = sum(l) / len(l)
+    return len([x for x in l if x > mean])
+
+print(count_above_mean([1, 2, 3, 4, 5, 6]))
+Trouver les nombres présents dans deux listes :
+python
+Copy code
+def common_elements(l1, l2):
+    return list(set(l1) & set(l2))
+
+print(common_elements([1, 2, 3, 4], [3, 4, 5, 6]))
+Trouver le nombre de fois que chaque caractère apparaît dans une chaîne de caractères :
+python
+Copy code
+def count_characters(s):
+    d = {}
+    for c in s:
+        if c in d:
+            d[c] += 1
+        else:
+            d[c] = 1
+    return d
+
+print(count_characters("Bonjour"))
+Trouver toutes les paires de nombres dont la somme est égale à un nombre donné :
+python
+Copy code
+def find_pairs(l, target):
+    pairs = []
+    for i, x in enumerate(l):
+        for j, y in enumerate(l[i+1:]):
+            if x + y == target:
+                pairs.append((x, y))
+    return pairs
+
+print(find_pairs([1, 2, 3, 4, 5], 5))
+Évaluer une expression mathématique donnée sous forme de chaîne de caractères :
+python
+Copy code
+def evaluate_expression(s):
+    return eval(s)
+
+print(evaluate_expression("2+3*4"))
+J'espère que ces solutions vous aideront à résoudre ces exercices un peu plus difficiles. N'hésitez pas à me poser d'autres questions si vous en avez besoin.

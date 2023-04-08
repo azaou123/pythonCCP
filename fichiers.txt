@@ -1,0 +1,97 @@
+Voici 10 exercices plus avancés impliquant des opérations sur les fichiers en Python :
+
+Compter le nombre de lignes, de mots et de caractères dans un fichier texte :
+python
+Copy code
+def count_file(filename):
+    with open(filename, "r") as file:
+        lines = 0
+        words = 0
+        chars = 0
+        for line in file:
+            lines += 1
+            words += len(line.split())
+            chars += len(line)
+    return (lines, words, chars)
+
+print(count_file("test.txt"))
+Fusionner deux fichiers triés en un seul fichier trié :
+python
+Copy code
+def merge_files(file1, file2, output):
+    with open(file1, "r") as f1, open(file2, "r") as f2, open(output, "w") as out:
+        line1 = f1.readline()
+        line2 = f2.readline()
+        while line1 and line2:
+            if line1 < line2:
+                out.write(line1)
+                line1 = f1.readline()
+            else:
+                out.write(line2)
+                line2 = f2.readline()
+        while line1:
+            out.write(line1)
+            line1 = f1.readline()
+        while line2:
+            out.write(line2)
+            line2 = f2.readline()
+
+merge_files("file1.txt", "file2.txt", "merged.txt")
+Calculer le hash MD5 d'un fichier :
+python
+Copy code
+import hashlib
+
+def md5_file(filename):
+    with open(filename, "rb") as file:
+        md5 = hashlib.md5()
+        while chunk := file.read(8192):
+            md5.update(chunk)
+    return md5.hexdigest()
+
+print(md5_file("test.txt"))
+Extraire les lignes d'un fichier qui correspondent à un motif de recherche :
+python
+Copy code
+import re
+
+def grep_file(filename, pattern):
+    with open(filename, "r") as file:
+        return [line.strip() for line in file if re.search(pattern, line)]
+
+print(grep_file("test.txt", "hello"))
+Chiffrer et déchiffrer un fichier en utilisant le chiffrement de César :
+python
+Copy code
+def caesar_encrypt(filename, key):
+    with open(filename, "r") as file, open(filename+".enc", "w") as out:
+        for line in file:
+            encrypted = "".join([chr((ord(c) - 32 + key) % 94 + 32) for c in line])
+            out.write(encrypted)
+
+def caesar_decrypt(filename, key):
+    with open(filename, "r") as file, open(filename+".dec", "w") as out:
+        for line in file:
+            decrypted = "".join([chr((ord(c) - 32 - key) % 94 + 32) for c in line])
+            out.write(decrypted)
+
+caesar_encrypt("test.txt", 3)
+caesar_decrypt("test.txt.enc", 3)
+Lire et écrire des fichiers CSV en utilisant la bibliothèque csv :
+python
+Copy code
+import csv
+
+def read_csv(filename):
+    with open(filename, "r") as file:
+        reader = csv.reader(file)
+        header = next(reader)
+        rows = [row for row in reader]
+    return (header, rows)
+
+def write_csv(filename, header, rows):
+    with open(filename, "w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerow(header)
+        for row in rows:
+            writer.writerow(row)

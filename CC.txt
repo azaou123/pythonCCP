@@ -1,0 +1,261 @@
+Vérifier si une chaîne de caractères est un palindrome :
+python
+Copy code
+def is_palindrome(s):
+    return s == s[::-1]
+
+print(is_palindrome("racecar"))
+Compter le nombre d'occurrences de chaque mot dans une chaîne de caractères :
+python
+Copy code
+def count_words(s):
+    words = s.split()
+    counts = {}
+    for word in words:
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+    return counts
+
+print(count_words("the quick brown fox jumps over the lazy dog"))
+Inverser chaque mot dans une chaîne de caractères :
+python
+Copy code
+def reverse_words(s):
+    return " ".join(word[::-1] for word in s.split())
+
+print(reverse_words("hello world"))
+Vérifier si une chaîne de caractères peut être composée en utilisant les caractères d'une autre chaîne de caractères :
+python
+Copy code
+def is_composed(s1, s2):
+    s1_counts = {}
+    s2_counts = {}
+    for c in s1:
+        if c in s1_counts:
+            s1_counts[c] += 1
+        else:
+            s1_counts[c] = 1
+    for c in s2:
+        if c in s2_counts:
+            s2_counts[c] += 1
+        else:
+            s2_counts[c] = 1
+    for c in s1_counts:
+        if c not in s2_counts or s1_counts[c] > s2_counts[c]:
+            return False
+    return True
+
+print(is_composed("hello", "lellofh"))
+Trouver la plus longue sous-chaîne commune à deux chaînes de caractères :
+python
+Copy code
+def longest_common_substring(s1, s2):
+    m = len(s1)
+    n = len(s2)
+    dp = [[0] * (n+1) for _ in range(m+1)]
+    max_length = 0
+    end_index = 0
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            if s1[i-1] == s2[j-1]:
+                dp[i][j] = dp[i-1][j-1] + 1
+                if dp[i][j] > max_length:
+                    max_length = dp[i][j]
+                    end_index = i-1
+            else:
+                dp[i][j] = 0
+    return s1[end_index-max_length+1 : end_index+1]
+
+print(longest_common_substring("abcdefg", "abcedfg"))
+Vérifier si une chaîne de caractères peut être divisée en plusieurs mots en utilisant un dictionnaire de mots :
+python
+Copy code
+def can_be_divided(s, words):
+    n = len(s)
+    dp = [False] * (n+1)
+    dp[0] = True
+    for i in range(1, n+1):
+        for word in words:
+            if i >= len(word) and s[i-len(word):i] == word and dp[i-len(word)]:
+                dp[i] = True
+                break
+    return dp[n]
+
+print(can_be_divided("leetcode", ["leet", "code"]))
+Trouver la plus longue sous-chaîne de caractères
+
+
+
+azawbadr@gmail.com
+continuer
+Trouver la plus longue sous-chaîne de caractères sans répétition :
+python
+Copy code
+def longest_substring_without_repeating(s):
+    n = len(s)
+    start = 0
+    max_len = 0
+    seen = {}
+    for end in range(n):
+        if s[end] in seen and seen[s[end]] >= start:
+            start = seen[s[end]] + 1
+        seen[s[end]] = end
+        max_len = max(max_len, end-start+1)
+    return max_len
+
+print(longest_substring_without_repeating("abcabcbb"))
+Vérifier si une chaîne de caractères est une permutation d'une autre chaîne de caractères :
+python
+Copy code
+def is_permutation(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    s1_counts = {}
+    s2_counts = {}
+    for c in s1:
+        if c in s1_counts:
+            s1_counts[c] += 1
+        else:
+            s1_counts[c] = 1
+    for c in s2:
+        if c in s2_counts:
+            s2_counts[c] += 1
+        else:
+            s2_counts[c] = 1
+    return s1_counts == s2_counts
+
+print(is_permutation("abc", "cba"))
+Compter le nombre de permutations d'une chaîne de caractères qui sont palindromes :
+python
+Copy code
+def count_palindrome_permutations(s):
+    n = len(s)
+    counts = {}
+    for c in s:
+        if c in counts:
+            counts[c] += 1
+        else:
+            counts[c] = 1
+    odd_count = 0
+    for c in counts:
+        if counts[c] % 2 == 1:
+            odd_count += 1
+    if odd_count > 1:
+        return 0
+    else:
+        count = 1
+        for c in counts:
+            count *= factorial(counts[c] // 2)
+        if odd_count == 1:
+            count *= odd_count
+        return count
+
+print(count_palindrome_permutations("aabbc"))
+Trouver le plus petit sous-chaîne de caractères qui contient toutes les lettres d'une autre chaîne de caractères :
+python
+Copy code
+def smallest_substring_with_all_chars(s, t):
+    n = len(s)
+    counts = {}
+    for c in t:
+        if c in counts:
+            counts[c] += 1
+        else:
+            counts[c] = 1
+    start = 0
+    end = 0
+    min_len = float('inf')
+    count = len(t)
+    while end < n:
+        if s[end] in counts:
+            counts[s[end]] -= 1
+            if counts[s[end]] >= 0:
+                count -= 1
+        while count == 0:
+            if end - start + 1 < min_len:
+                min_len = end - start + 1
+            if s[start] in counts:
+                counts[s[start]] += 1
+                if counts[s[start]] > 0:
+                    count += 1
+            start += 1
+        end += 1
+    return s[start-1 : start+min_len-1]
+
+print(smallest_substring_with_all_chars("ADOBECODEBANC", "ABC"))
+
+
+
+azawbadr@gmail.com
+continuer
+Vérifier si deux chaînes de caractères sont des rotations l'une de l'autre :
+python
+Copy code
+def is_rotation(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    return s2 in s1 + s1
+
+print(is_rotation("abcde", "cdeab"))
+Compter le nombre de sous-chaînes palindromes dans une chaîne de caractères :
+python
+Copy code
+def count_palindromic_substrings(s):
+    n = len(s)
+    count = 0
+    for i in range(n):
+        # cas de sous-chaîne de longueur impaire
+        j = 0
+        while i-j >= 0 and i+j < n and s[i-j] == s[i+j]:
+            count += 1
+            j += 1
+        # cas de sous-chaîne de longueur paire
+        j = 0
+        while i-j >= 0 and i+j+1 < n and s[i-j] == s[i+j+1]:
+            count += 1
+            j += 1
+    return count
+
+print(count_palindromic_substrings("abc"))
+Trouver le plus long palindrome dans une chaîne de caractères :
+python
+Copy code
+def longest_palindrome(s):
+    n = len(s)
+    max_len = 0
+    start = 0
+    for i in range(n):
+        # cas de sous-chaîne de longueur impaire
+        j = 0
+        while i-j >= 0 and i+j < n and s[i-j] == s[i+j]:
+            if j*2+1 > max_len:
+                max_len = j*2+1
+                start = i-j
+            j += 1
+        # cas de sous-chaîne de longueur paire
+        j = 0
+        while i-j >= 0 and i+j+1 < n and s[i-j] == s[i+j+1]:
+            if j*2+2 > max_len:
+                max_len = j*2+2
+                start = i-j
+            j += 1
+    return s[start : start+max_len]
+
+print(longest_palindrome("babad"))
+Vérifier si une chaîne de caractères peut être écrite comme une concaténation de mots d'un dictionnaire :
+python
+Copy code
+def word_break(s, word_dict):
+    n = len(s)
+    dp = [False] * (n+1)
+    dp[0] = True
+    for i in range(1, n+1):
+        for j in range(i):
+            if dp[j] and s[j:i] in word_dict:
+                dp[i] = True
+                break
+    return dp[n]
+
+print(word_break("leetcode", ["leet", "code"]))
