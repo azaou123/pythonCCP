@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -54,7 +55,7 @@
             <div class="col-md-4 mt-3">
                 <p class="fw-bold fw-2 fw-bold">Exercice 1 :</p>
                 <p class="my-3">
-                    Calculer le hash MD5 d'un fichier 
+                    Écrire une fonction qui prend en entrée une liste d'entiers et renvoie la somme de tous les éléments de la liste.
                 </p>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex1">
@@ -70,14 +71,8 @@
                                 </div>
                                 <div class="modal-body bg-dark">
                                     <code class="text-success bg-dark">
-                                        def md5_file(filename): <br>
-                                        &nbsp;&nbsp;&nbsp;with open(filename, "rb") as file: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;md5 = hashlib.md5() <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while chunk := file.read(8192): <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;md5.update(chunk) <br>
-                                        &nbsp;&nbsp;&nbsp;return md5.hexdigest() <br>
-
-                                        print(md5_file("test.txt"))
+                                        def sum_list(lst): <br>
+                                        &nbsp;&nbsp;&nbsp;return sum(lst)
                                     </code>
                                 </div>
                                 <div class="modal-footer">
@@ -92,7 +87,7 @@
             <div class="col-md-4 mt-3">
                 <p class="fw-bold fw-2 fw-bold">Exercice 2 :</p>
                 <p class="my-3">
-                    Compter le nombre de lignes, de mots et de caractères dans un fichier texte
+                    Écrire une fonction qui prend en entrée une liste d'entiers et renvoie la moyenne de tous les éléments de la liste.
                 </p>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex2">
@@ -108,18 +103,8 @@
                                 </div>
                                 <div class="modal-body bg-dark">
                                     <code class="text-success bg-dark">
-                                        def count_file(filename): <br>
-                                        &nbsp;&nbsp;&nbsp;with open(filename, "r") as file: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lines = 0 <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; words = 0 <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chars = 0 <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for line in file: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lines += 1 <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;words += len(line.split()) <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chars += len(line) <br>
-                                        &nbsp;&nbsp;&nbsp;return (lines, words, chars) <br>
-
-                                        print(count_file("test.txt"))
+                                        def mean_list(lst): <br>
+                                        &nbsp;&nbsp;&nbsp;return sum(lst) / len(lst)
                                     </code>
                                 </div>
                                 <div class="modal-footer">
@@ -134,7 +119,7 @@
             <div class="col-md-4 mt-3">
                 <p class="fw-bold fw-2 fw-bold">Exercice 3 :</p>
                 <p class="my-3">
-                    Fusionner deux fichiers triés en un seul fichier trié :
+                    Écrire une fonction qui prend en entrée une liste d'entiers et renvoie le plus grand élément de la liste.
                 </p>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex3">
@@ -150,25 +135,8 @@
                                 </div>
                                 <div class="modal-body bg-dark">
                                     <code class="text-success bg-dark">
-                                        def merge_files(file1, file2, output): <br>
-                                        &nbsp;&nbsp;&nbsp;with open(file1, "r") as f1, open(file2, "r") as f2, open(output, "w") as out: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line1 = f1.readline() <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line2 = f2.readline() <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while line1 and line2: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if line1 < line2: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.write(line1) <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line1 = f1.readline() <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; out.write(line2) <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line2 = f2.readline() <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while line1: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.write(line1) <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line1 = f1.readline() <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while line2: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.write(line2) <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line2 = f2.readline() <br>
-
-                                        merge_files("file1.txt", "file2.txt", "merged.txt")
+                                        def max_list(lst): <br>
+                                        &nbsp;&nbsp;&nbsp;return max(lst)
                                     </code>
                                 </div>
                                 <div class="modal-footer">
@@ -183,7 +151,7 @@
             <div class="col-md-4 mt-3">
                 <p class="fw-bold fw-2 fw-bold">Exercice 4 :</p>
                 <p class="my-3">
-                    Calculer le hash MD5 d'un fichier
+                    Écrire une fonction qui prend en entrée une liste d'entiers et renvoie le plus petit élément de la liste.
                 </p>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex4">
@@ -199,16 +167,8 @@
                                 </div>
                                 <div class="modal-body bg-dark">
                                     <code class="text-success bg-dark">
-                                        import hashlib <br>
-
-                                        def md5_file(filename): <br>
-                                        &nbsp;&nbsp;&nbsp;with open(filename, "rb") as file: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;md5 = hashlib.md5() <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while chunk := file.read(8192): <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; md5.update(chunk) <br>
-                                        &nbsp;&nbsp;&nbsp;return md5.hexdigest() <br>
-
-                                        print(md5_file("test.txt"))
+                                        def min_list(lst): <br>
+                                        &nbsp;&nbsp;&nbsp;return min(lst)
                                     </code>
                                 </div>
                                 <div class="modal-footer">
@@ -223,7 +183,7 @@
             <div class="col-md-4 mt-3">
                 <p class="fw-bold fw-2 fw-bold">Exercice 5 :</p>
                 <p class="my-3">
-                    Extraire les lignes d'un fichier qui correspondent à un motif de recherche
+                    Écrire une fonction qui prend en entrée une liste d'entiers et renvoie une nouvelle liste avec tous les éléments multipliés par 2.
                 </p>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex5">
@@ -239,13 +199,8 @@
                                 </div>
                                 <div class="modal-body bg-dark">
                                     <code class="text-success bg-dark">
-                                        import re <br>
-
-                                        def grep_file(filename, pattern): <br>
-                                        &nbsp;&nbsp;&nbsp;with open(filename, "r") as file: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return [line.strip() for line in file if re.search(pattern, line)] <br>
-
-                                        print(grep_file("test.txt", "hello"))
+                                        def double_list(lst): <br>
+                                        &nbsp;&nbsp;&nbsp;return [x * 2 for x in lst]
                                     </code>
                                 </div>
                                 <div class="modal-footer">
@@ -260,7 +215,7 @@
             <div class="col-md-4 mt-3">
                 <p class="fw-bold fw-2 fw-bold">Exercice 6 :</p>
                 <p class="my-3">
-                    Chiffrer et déchiffrer un fichier en utilisant le chiffrement de César  
+                    Écrire une fonction qui prend en entrée deux listes d'entiers et renvoie une nouvelle liste avec tous les éléments communs aux deux listes.
                 </p>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex6">
@@ -276,20 +231,8 @@
                                 </div>
                                 <div class="modal-body bg-dark">
                                     <code class="text-success bg-dark">
-                                        def caesar_encrypt(filename, key): <br>
-                                        &nbsp;&nbsp;&nbsp;with open(filename, "r") as file, open(filename+".enc", "w") as out: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for line in file: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encrypted = "".join([chr((ord(c) - 32 + key) % 94 + 32) for c in line]) <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.write(encrypted) <br>
-
-                                        def caesar_decrypt(filename, key): <br>
-                                        &nbsp;&nbsp;&nbsp;with open(filename, "r") as file, open(filename+".dec", "w") as out: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for line in file: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;decrypted = "".join([chr((ord(c) - 32 - key) % 94 + 32) for c in line]) <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.write(decrypted) <br>
-
-                                        caesar_encrypt("test.txt", 3) <br>
-                                        caesar_decrypt("test.txt.enc", 3)
+                                        def common_elements(lst1, lst2): <br>
+                                        &nbsp;&nbsp;&nbsp;return list(set(lst1) & set(lst2))
                                     </code>
                                 </div>
                                 <div class="modal-footer">
@@ -304,7 +247,7 @@
             <div class="col-md-4 mt-3">
                 <p class="fw-bold fw-2 fw-bold">Exercice 7 :</p>
                 <p class="my-3">
-                    Lire et écrire des fichiers CSV en utilisant la bibliothèque csv
+                    Écrire une fonction qui prend en entrée une liste d'entiers et renvoie une nouvelle liste avec tous les éléments pairs de la liste.
                 </p>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex7">
@@ -320,21 +263,104 @@
                                 </div>
                                 <div class="modal-body bg-dark">
                                     <code class="text-success bg-dark">
-                                        import csv <br>
-
-                                        def read_csv(filename): <br>
-                                        &nbsp;&nbsp;&nbsp;with open(filename, "r") as file: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader = csv.reader(file) <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;header = next(reader) <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows = [row for row in reader] <br>
-                                        &nbsp;&nbsp;&nbsp;return (header, rows) <br>
-
-                                        def write_csv(filename, header, rows): <br>
-                                        &nbsp;&nbsp;&nbsp;with open(filename, "w", newline="") as file: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer = csv.writer(file) <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer.writerow(header) <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for row in rows: <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer.writerow(row) <br>
+                                        def even_elements(lst): <br>
+                                        &nbsp;&nbsp;&nbsp;return [x for x in lst if x % 2 == 0]
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 8  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 8 :</p>
+                <p class="my-3">
+                    Écrire une fonction qui prend en entrée une liste d'entiers et renvoie une nouvelle liste avec tous les éléments impairs de la liste.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex8">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex8 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def odd_elements(lst): <br>
+                                        &nbsp;&nbsp;&nbsp;return [x for x in lst if x % 2 != 0]
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 9  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 9 :</p>
+                <p class="my-3">
+                    Écrire une fonction qui prend en entrée une liste d'entiers et renvoie une nouvelle liste avec tous les éléments triés par ordre croissant.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex9">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex9 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def sort_list(lst): <br>
+                                        &nbsp;&nbsp;&nbsp;return sorted(lst)
+                                    </code>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Exercice 10  -->
+            <div class="col-md-4 mt-3">
+                <p class="fw-bold fw-2 fw-bold">Exercice 10 :</p>
+                <p class="my-3">
+                    Écrire une fonction qui prend en entrée une liste d'entiers et renvoie une nouvelle liste avec tous les éléments triés par ordre décroissant.
+                </p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ex1O">
+                    Solution
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="ex10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Solution Ex 10 :</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark">
+                                    <code class="text-success bg-dark">
+                                        def sort_list_desc(lst): <br>
+                                        &nbsp;&nbsp;&nbsp;return sorted(lst, reverse=True)
                                     </code>
                                 </div>
                                 <div class="modal-footer">
